@@ -18,6 +18,8 @@ jobs:
         with:
           override: true
 
+      - uses: Swatinem/rust-cache@v2
+
       - uses: crazy-max/ghaction-chocolatey@v1
         with:
           args: install zip unzip pkgconfiglite
