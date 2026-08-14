@@ -1,11 +1,12 @@
 use egui::{self, Color32, Context, CornerRadius, Stroke, TextStyle, ThemePreference, Visuals};
 
-pub const ACCENT: Color32 = Color32::from_rgb(0, 76, 176);
-pub const BG: Color32 = Color32::from_rgb(30, 30, 30);
-pub const LIGHTER_BG: Color32 = Color32::from_rgb(36, 36, 36);
-pub const SECTION_BG: Color32 = Color32::from_rgb(36, 36, 36);
-pub const DARKER_BG: Color32 = Color32::from_rgb(26, 26, 26);
-pub const SEPARATOR_BG: Color32 = Color32::from_rgb(69, 69, 69);
+pub const ACCENT: Color32 = Color32::from_rgb(139, 92, 246);
+pub const ACCENT_HOVER: Color32 = Color32::from_rgb(167, 139, 250);
+pub const BG: Color32 = Color32::from_rgb(0, 0, 0);
+pub const LIGHTER_BG: Color32 = Color32::from_rgb(0, 0, 0);
+pub const SECTION_BG: Color32 = Color32::from_rgb(0, 0, 0);
+pub const DARKER_BG: Color32 = Color32::from_rgb(0, 0, 0);
+pub const SEPARATOR_BG: Color32 = Color32::from_rgb(35, 35, 35);
 pub const FG: Color32 = Color32::from_rgb(250, 250, 250);
 
 pub const OK_GREEN: Color32 = Color32::GREEN;
@@ -68,6 +69,7 @@ pub fn set_theme(ctx: &Context) {
     visuals.widgets.inactive.corner_radius = corner_radius;
 
     visuals.widgets.hovered.corner_radius = corner_radius;
+    visuals.widgets.hovered.bg_fill = ACCENT_HOVER;
 
     visuals.widgets.open.bg_fill = SEPARATOR_BG;
     visuals.widgets.open.corner_radius = corner_radius;
